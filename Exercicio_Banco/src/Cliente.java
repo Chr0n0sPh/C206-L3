@@ -4,6 +4,11 @@ public class Cliente{
     private String nome;
     private String cpf;
     private Conta conta;
+
+    public Conta getConta() {
+        return conta;
+    }
+
     public boolean sacarDinheiro(double valor){
         if(valor > this.conta.getSaldo()) {
             System.out.println("Saldo Insuficiente!");
@@ -41,7 +46,7 @@ public class Cliente{
         }
     }
 
-    public boolean transferir(Cliente clienteParaReceber,double valor){
+    public boolean transferir(Conta contaParaReceber,double valor){
         if(valor > this.conta.getSaldo()){
             System.out.println("Saldo Insuficiente para Realizar a Operação!");
             return false;
@@ -50,8 +55,8 @@ public class Cliente{
             this.conta.setSaldo(novoSaldo);
 
             double valorRecebido;
-            valorRecebido = clienteParaReceber.conta.getSaldo() + valor;
-            clienteParaReceber.conta.setSaldo(valorRecebido);
+            valorRecebido = contaParaReceber.getSaldo()+valor;
+            contaParaReceber.setSaldo(valorRecebido);
 
             System.out.println("Trasnferência Efetuada");
             return true;

@@ -26,7 +26,7 @@ public class Main {
         System.out.println(cliente2.toString());
 
         //Realizando operação de transferencia
-        cliente2.transferir(cliente1,17000);
+        cliente2.transferir(cliente1.getConta(),17000);
 
         System.out.println(cliente1.toString());
         System.out.println(cliente2.toString());
