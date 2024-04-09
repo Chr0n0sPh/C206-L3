@@ -19,9 +19,19 @@ public class Vampiro extends Monstro{
     }
 
     public void atacarComMordida(Monstro monstroAlvo){
-        int novaVida = monstroAlvo.getVida() - this.getEnergia();
+        int novaVida = monstroAlvo.getVida() - 1;
         monstroAlvo.setVida(novaVida);
 
         this.medidorDeSangue++;
+        System.out.println("Sangue ");
+    }
+
+    public String toString() {
+        return "Infos do Vampiro" + "\n" +
+                "Idade: " + this.getIdade() + "\n" +
+                "Vida: " + this.getVida() + "\n" +
+                "Energia: " + this.getEnergia() + "\n" +
+                "Forma de Morcego: " + this.formaDeMorcego + "\n" +
+                "Medidor de Sangue: " + medidorDeSangue;
     }
 }

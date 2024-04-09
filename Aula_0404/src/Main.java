@@ -11,7 +11,15 @@ public class Main {
 
         bruxa.lancarFeitico(zumbi,0);
         System.out.println(bruxa.toString());
+        System.out.println(zumbi.toString());
 
         zumbi.atacarComMordida(vampiro);
+        System.out.println(zumbi.toString());
+        System.out.println(vampiro.toString());
+
+        vampiro.atacarComMordida(zumbi);
+        System.out.println(zumbi.toString());
+        vampiro.recuperarVida();
+        System.out.println(vampiro.toString());
     }
 }

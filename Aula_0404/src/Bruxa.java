@@ -26,7 +26,7 @@ public class Bruxa extends Monstro{
     public void listarFeiticos(){
         for (int i = 0; i < feiticos.length; i++) {
             Feitico feitico = feiticos[i];
-            if (feitico.getNome() != null) {
+            if (feitico.getPoder() != 0) {
                 System.out.println("Nome: " + feitico.getNome());
                 System.out.println("Poder: " + feitico.getPoder());
                 System.out.println();
@@ -57,7 +57,8 @@ public class Bruxa extends Monstro{
 
     @Override
     public String toString() {
-        return "Idade: " + this.getIdade() + "\n" +
+        return "Infos da Bruxa" + "\n" +
+                "Idade: " + this.getIdade() + "\n" +
                 "Vida: " + this.getVida() + "\n" +
                 "Energia: " + this.getEnergia() + "\n";
     }
