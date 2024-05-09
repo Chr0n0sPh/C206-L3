@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Item implements Comparable<Item> {
     private int valor;
     private String nome;
@@ -19,8 +17,9 @@ public class Item implements Comparable<Item> {
 
     @Override
     public int compareTo(Item o) {
-        return this.nome.compareTo(o.nome);
-        //return Integer.compare(this.valor, o.valor);
-        //return Integer.compare(o.valor, this.valor);
+        //return this.nome.compareTo(o.nome); //alfabética crescente
+        //return o.nome.compareTo(this.nome); //alfabética decrescente
+        return Integer.compare(this.valor, o.valor);  //ordem numérica crescente
+        //return Integer.compare(o.valor, this.valor);  //ordem numérica decrescente
     }
 }
